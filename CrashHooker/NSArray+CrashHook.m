@@ -20,7 +20,7 @@
         //=================
         
         //instance array method exchange
-        [CrashHooker exchangeClassMethod:[self class] method1Sel:@selector(arrayWithObjects:count:) method2Sel:@selector(CrashHookArrayWithObjects:count:)];
+        [CrashHooker exchangeClassMethod:[self class] method1Sel:@selector(arrayWithObjects:count:) method2Sel:@selector(crashHookArrayWithObjects:count:)];
         
         
         
@@ -127,11 +127,11 @@
 //=================================================================
 #pragma mark - objectsAtIndexes:
 
-- (NSArray *)CrashHookObjectsAtIndexes:(NSIndexSet *)indexes {
+- (NSArray *)crashHookObjectsAtIndexes:(NSIndexSet *)indexes {
     
     NSArray *returnArray = nil;
     @try {
-        returnArray = [self CrashHookObjectsAtIndexes:indexes];
+        returnArray = [self crashHookObjectsAtIndexes:indexes];
     } @catch (NSException *exception) {
         NSString *defaultToDo = CrashHookDefaultReturnNil;
         [CrashHooker noteErrorWithException:exception defaultToDo:defaultToDo];

@@ -25,7 +25,7 @@
         [CrashHooker exchangeInstanceMethod:NSConcreteAttributedString method1Sel:@selector(initWithAttributedString:) method2Sel:@selector(crashHookInitWithAttributedString:)];
         
         //initWithString:attributes:
-        [CrashHooker exchangeInstanceMethod:NSConcreteAttributedString method1Sel:@selector(initWithString:attributes:) method2Sel:@selector(CrashHookInitWithString:attributes:)];
+        [CrashHooker exchangeInstanceMethod:NSConcreteAttributedString method1Sel:@selector(initWithString:attributes:) method2Sel:@selector(crashHookInitWithString:attributes:)];
     });
     
 }
