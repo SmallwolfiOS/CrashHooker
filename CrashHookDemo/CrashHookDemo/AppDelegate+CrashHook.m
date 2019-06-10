@@ -11,12 +11,16 @@
 @implementation AppDelegate (CrashHook)
 
 - (void)enableSafeMode{
+    
+    
+    [CrashHooker setupNoneSelClassStringsArr:@[
+                                               @"NSNull",
+                                               @"NSNumber",
+                                               @"NSString",
+                                               @"NSDictionary",
+                                               @"NSArray"
+                                               ]];
     [CrashHooker enbleCrashHookMode];
-    
-//    [CrashHooker setupNoneSelClassStringsArr:@[
-//                                               @"AppDelegate",
-//                                               ]];
-    
     
 }
 

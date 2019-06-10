@@ -47,10 +47,17 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)enbleCrashHookMode;
 
 /**
- *  初始化一个需要防止”unrecognized selector sent to instance”的崩溃的类名的数组,黑名单
+ *  初始化一个需要防止”unrecognized selector sent to instance”的崩溃的类名数组
+ *  ⚠️不可将@"NSObject"加入classStrings数组中
+ *  ⚠️不可将UI前缀的字符串加入classStrings数组中
  */
 + (void)setupNoneSelClassStringsArr:(NSArray<NSString *> *)classStrings;
-
+/**
+ *  初始化一个需要防止”unrecognized selector sent to instance”的崩溃的类名前缀的数组
+ *  ⚠️不可将UI前缀的字符串(包括@"UI")加入classStringPrefixs数组中
+ *  ⚠️不可将NS前缀的字符串(包括@"NS")加入classStringPrefixs数组中
+ */
++ (void)setupNoneSelClassStringPrefixsArr:(NSArray<NSString *> *)classStringPrefixs;
 //您可以忽略以下方法
 
 + (void)exchangeClassMethod:(Class)anClass method1Sel:(SEL)method1Sel method2Sel:(SEL)method2Sel;

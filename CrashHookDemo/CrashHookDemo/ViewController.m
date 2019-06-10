@@ -17,6 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UITextField * textf = [[UITextField alloc]initWithFrame:CGRectMake(0, 0, 100, 40)];
+    [self.view addSubview:textf];
+    
+    textf.backgroundColor = [UIColor redColor];
+    
 }
 
 

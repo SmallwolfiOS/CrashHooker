@@ -37,7 +37,7 @@
     });
 }
 /**
- *  初始化一个需要防止”unrecognized selector sent to instance”的崩溃的类名的数组,黑名单
+ *  初始化一个需要防止”unrecognized selector sent to instance”的崩溃的类名的数组
  */
 + (void)setupNoneSelClassStringsArr:(NSArray<NSString *> *)classStrings {
     [NSObject setupNoneSelClassStringsArr:classStrings];

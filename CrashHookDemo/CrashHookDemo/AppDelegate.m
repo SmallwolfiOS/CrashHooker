@@ -19,7 +19,7 @@
     // Override point for customization after application launch.
     
     [self enableSafeMode];
-    [self performSelector:@selector(functionType)];
+//    [self performSelector:@selector(functionType)];
     
     return YES;
 }

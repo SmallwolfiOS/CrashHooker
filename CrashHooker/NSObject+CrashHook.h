@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 + (void)setupNoneSelClassStringsArr:(NSArray<NSString *> *)classStrings;
-
++ (void)setupNoneSelClassStringPrefixsArr:(NSArray<NSString *> *)classStringPrefixs;
 @end
 
 /**
